@@ -12,17 +12,20 @@
   .headerText {
     flex: 5;
     border: 2px solid red;
-    padding-left: 2rem;
+    padding-left: 7%;
   }
   
   .headerNav {
     flex: 10; 
     border: 2px solid red;
-    /* put text aligned to the right */
     display: flex;
     justify-content: flex-end;
-    padding-right: 2rem;
+    padding-right: 7%;
+  }
 
-
+  .navLink {
+    text-decoration: none;
+    color: black;
+    margin: 0 10px;
   }
   
