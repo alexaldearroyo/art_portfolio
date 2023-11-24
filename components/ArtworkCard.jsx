@@ -1,14 +1,17 @@
-// components/ArtworkContainer.jsx
 
 import React from 'react';
+import Image from 'next/image';
 import styles from '../styles/components/ArtworkCard.module.css';
 
-function ArtworkContainer({ children }) {
+
+function ArtworkCard({ image }) {
   return (
     <div className={styles.ArtworkCard}>
-      {children}
+      <div className={styles.imageContainer}>
+      <Image src={image} alt="Artwork" fill sizes="(max-width: 768px) 100vw, 400px" />
+      </div>
     </div>
   );
 }
 
-export default ArtworkContainer;
+export default ArtworkCard;

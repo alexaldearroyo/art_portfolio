@@ -1,140 +1,67 @@
-styles/main.css:
+components/ArtworkCard.jsx:
 
-* {
-    color: black;
-    font-size: 1.5rem;
-    }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
+import React from 'react';
+import styles from '../styles/components/ArtworkCard.module.css';
 
-  }
-  
-  .headerSpace {
-    flex: 1.5;
-    background-color: #f0f0f0;
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    border: 2px inset black;
+function ArtworkCard({ image }) {
+  return (
+    <div className={styles.ArtworkCard}>
+      <img src={image} alt="Artwork" />
 
-  }
-  
-  .mainSpace {
-    flex: 8;
-    width: 100%;
-    height: 100%;
-    overflow-y: auto;
-    background-color: #ffffff;
-    display: flex;
-    align-items: stretch;
-    justify-content: center;
-    flex-direction: column;
-    border: 2px inset black;
-  }
-  
-  .footerSpace {
-    flex: 1;
-    width: 100%;
-    background-color: #f0f0f0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px inset black;
-
-  }
-  
-  @media (max-width: 600px) {
-    .mainSpace {
-      flex-direction: column;
-    }
-  }
-----------------------------------------
-
-styles/components/ArtworkCard.module.css:
-
-.ArtworkCard {
-    height: 15rem;
-    width: 15rem;
-    border: 2px solid black;
-    background-color: var(--color-white);
-    box-shadow: 0 0 0.5rem 0.25rem rgba(0, 0, 0, 0.1);
-    border-radius: 1rem;
+    </div>
+  );
 }
 
+export default ArtworkCard;
+
 ----------------------------------------
 
-styles/components/Gallery.module.css:
+components/Gallery.jsx:
 
-.gallerySpace {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  gap: 3rem;
-  border: 2px inset red;
+import React from 'react';
+import ArtworkCard from './ArtworkCard';
+import styles from '../styles/components/Gallery.module.css';
+
+
+const images = [
+  require('../assets/001.png'),
+  require('../assets/002.png'),
+  require('../assets/003.png'),
+  require('../assets/004.png'),
+  require('../assets/005.png'),
+  require('../assets/006.png'),
+  require('../assets/007.png'),
+  require('../assets/008.png'),
+  require('../assets/009.png'),
+  require('../assets/010.png'),
+  require('../assets/011.png'),
+  require('../assets/012.png'),
+]
+
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
 }
 
-@media (max-width: 600px) {
-  .gallerySpace {
-    flex-direction: column;
-    align-items: flex-start;
 
-  }
+function Gallery() {
+  const shuffledImages = shuffleArray([...images]);
+  
+  return (
+    <div className={styles.gallerySpace}>
+      {shuffledImages.slice(0, 3).map((image, index) => (
+        <ArtworkCard key={index} image={image} />
+      ))}
+    </div>
+  );
 }
-----------------------------------------
-
-styles/components/TextSpace.module.css:
-
-.textSpace {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    border: 2px inset red;
-  }
-  
-----------------------------------------
-
-styles/components/Header.module.css:
 
 
-.header {
-    display: flex;
-    width: 15em; 
-    flex-direction: row;
-    border: 2px solid red;
-    width: 100%;
-    height: 100%;
-    align-items: center;
-  }
-  
-  .headerText {
-    flex: 5;
-    border: 2px solid red;
-    padding-left: 7%;
-  }
-  
-  .headerNav {
-    flex: 10; 
-    border: 2px solid red;
-    display: flex;
-    justify-content: flex-end;
-    padding-right: 7%;
-  }
+export default Gallery;
 
-  .navLink {
-    text-decoration: none;
-    color: black;
-    margin: 0 10px;
-  }
-  
 ----------------------------------------
 

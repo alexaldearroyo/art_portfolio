@@ -1,10 +1,21 @@
+/* ArtworkCard.module.css */
+
 .ArtworkCard {
+    position: relative;
     height: 15rem;
     width: 15rem;
     border: 2px solid black;
     background-color: var(--color-white);
     box-shadow: 0 0 0.5rem 0.25rem rgba(0, 0, 0, 0.1);
     border-radius: 1rem;
-}
-
-
+    overflow: hidden;
+  }
+  
+  .imageContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+  

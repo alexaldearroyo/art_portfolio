@@ -60,3 +60,16 @@
       min-height: 3rem;
     }
   }
+
+  @media (max-height: 1000px) {
+    .mainSpace {
+      flex-direction: column;
+      padding-top: 2rem;
+    }
+    .headerSpace {
+      min-height: 5rem;
+    }
+    .footerSpace {
+      min-height: 3rem;
+    }
+  }
