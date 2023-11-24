@@ -6,7 +6,7 @@
 .container {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     align-items: center;
     justify-content: center;
@@ -14,7 +14,7 @@
   }
   
   .headerSpace {
-    flex: 1.5;
+    flex: 2.5;
     background-color: #f0f0f0;
     display: flex;
     width: 100%;
@@ -48,3 +48,15 @@
 
   }
   
+  @media (max-width: 750px) {
+    .mainSpace {
+      flex-direction: column;
+      padding-top: 2rem;
+    }
+    .headerSpace {
+      min-height: 5rem;
+    }
+    .footerSpace {
+      min-height: 3rem;
+    }
+  }
