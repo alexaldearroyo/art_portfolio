@@ -1,0 +1,8 @@
+.textSpace {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    border: 2px inset red;
+  }
+  

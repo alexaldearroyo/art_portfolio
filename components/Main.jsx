@@ -1,10 +1,10 @@
 import React from 'react';
 
-function Main() {
+function Main(props) {
   return (
-    <>
-    Main
-    </>
+    <div>
+      {props.children}
+    </div>
   );
 }
 

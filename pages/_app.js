@@ -1,7 +1,6 @@
 import "@/styles/globals.css";
 import "../styles/main.css";
 import Header from "../components/Header";
-import Main from "../components/Main";
 import Footer from "../components/Footer";
 
 export default function App({ Component, pageProps }) {
@@ -11,7 +10,7 @@ export default function App({ Component, pageProps }) {
         <Header />
       </header>
       <main className="mainSpace">
-        <Main />
+        <Component {...pageProps} />
       </main>
       <footer className="footerSpace">
         <Footer />
