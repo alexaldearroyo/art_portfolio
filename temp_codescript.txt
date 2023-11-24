@@ -1,91 +1,120 @@
-styles/main.css:
+pages/_app.js:
 
-* {
-    color: black;
-    font-size: 1.5rem;
-    min-width: 100vh;
-    max-width: 100vh;
-    max-height: 100vh;
-    }
+import "@/styles/globals.css";
+import "../styles/main.css";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
-.container {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    width: 100vh;
-    align-items: center;
-    justify-content: center;
+export default function App({ Component, pageProps }) {
+  return (
+    <div className="container">
+      <header className="headerSpace">
+        <Header />
+      </header>
+      <main className="mainSpace">
+        <Component {...pageProps} />
+      </main>
+      <footer className="footerSpace">
+        <Footer />
+      </footer>
+    </div>
+  );
+}
 
-  }
-  
-  .headerSpace {
-    flex: 1.5;
-    background-color: #f0f0f0;
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    border: 2px inset black;
-
-  }
-  
-  .mainSpace {
-    flex: 8;
-    width: 100%;
-    height: 100%;
-    overflow-y: auto;
-    background-color: #ffffff;
-    display: flex;
-    align-items: stretch;
-    justify-content: center;
-    flex-direction: column;
-    border: 2px inset black;
-  }
-  
-  .footerSpace {
-    flex: 1;
-    width: 100%;
-    background-color: #f0f0f0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px inset black;
-
-  }
-  
 ----------------------------------------
 
-styles/components/Gallery.module.css:
+pages/index.js:
 
-.gallerySpace {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-  gap: 2rem;
-  border: 2px inset red;
+import { Inter } from 'next/font/google'
+import Main from '../components/Main'
+import Gallery from '../components/Gallery'
+import TextSpace from '../components/TextSpace';
+
+const inter = Inter({ subsets: ['latin'] })
+
+
+
+export default function Home() {
+  return (
+    <>
+      <Main>
+        <Gallery />
+        <TextSpace />
+      </Main>
+    </>
+  )
 }
 ----------------------------------------
 
-styles/components/TextSpace.module.css:
+components/Header.jsx:
 
-.textSpace {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px inset red;
-  }
-  
+import React from 'react';
+
+function Header() {
+  return (
+    <>
+      Header
+    </>
+  );
+}
+
+export default Header;
+
 ----------------------------------------
 
-styles/components/ArtworkCard.module.css:
+components/Main.jsx:
 
-.ArtworkCard {
-    min-height: 1rem;
-    min-width: 1rem;
-    border: 2px solid black;
-    background-color: var(--color-white);
-    box-shadow: 0 0 0.5rem 0.25rem rgba(0, 0, 0, 0.1);
+import React from 'react';
+
+function Main(props) {
+  return (
+    <div>
+      {props.children}
+    </div>
+  );
 }
+
+export default Main;
+
+----------------------------------------
+
+components/Footer.jsx:
+
+import React from 'react';
+
+function Footer() {
+  return (
+    <>
+      Footer
+    </>
+  );
+}
+
+export default Footer;
+
+----------------------------------------
+
+components/Gallery.jsx:
+
+import React from 'react';
+import ArtworkCard from './ArtworkCard';
+import styles from '../styles/components/Gallery.module.css';
+
+function Gallery() {
+    const containers = new Array(3).fill(null);
+
+  return (
+    <div className={styles.gallerySpace}>
+      {containers.map((_, index) => (
+        <ArtworkCard key={index}>
+        </ArtworkCard>
+      ))}
+    </div>
+  );
+}
+
+
+export default Gallery;
+
 ----------------------------------------
 
