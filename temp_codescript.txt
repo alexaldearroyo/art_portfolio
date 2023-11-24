@@ -1,0 +1,90 @@
+pages/_app.js:
+
+import '@/styles/globals.css';
+import '../styles/main.css';
+
+export default function App({ Component, pageProps }) {
+  return (
+    <div className="container">
+      <header className="headerSpace"></header>
+      <main className="mainSpace">
+      </main>
+      <footer className="footerSpace"></footer>
+    </div>
+  );
+}
+
+----------------------------------------
+
+pages/index.js:
+
+import Head from 'next/head'
+import Image from 'next/image'
+import Header from '../components/Header'
+import Main from '../components/Main'
+import Footer from '../components/Footer'
+import { Inter } from 'next/font/google'
+import styles from '@/styles/Home.module.css'
+
+const inter = Inter({ subsets: ['latin'] })
+
+export default function Home() {
+  return (
+    <>
+      <Header />
+      <Main />
+      <Footer />
+    </>
+  )
+}
+
+----------------------------------------
+
+components/Header.jsx:
+
+import React from 'react';
+
+function Header() {
+  return (
+    <header>
+      Header
+    </header>
+  );
+}
+
+export default Header;
+
+----------------------------------------
+
+components/Main.jsx:
+
+import React from 'react';
+
+function Main() {
+  return (
+    <>
+    Main
+    </>
+  );
+}
+
+export default Main;
+
+----------------------------------------
+
+components/Footer.jsx:
+
+import React from 'react';
+
+function Footer() {
+  return (
+    <footer>
+      Footer
+    </footer>
+  );
+}
+
+export default Footer;
+
+----------------------------------------
+

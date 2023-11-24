@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    border: 1px solid black;
+    background-color: white;
+}
+
+.headerSpace {
+    flex: 2;
+}
+
+.mainSpace {
+    flex: 8;
+    overflow-y: auto;
+    /* Agrega desplazamiento vertical si el contenido supera la altura */
+}
+
+.footerSpace {
+    flex: 1;
+}
