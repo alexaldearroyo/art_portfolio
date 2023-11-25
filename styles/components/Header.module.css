@@ -7,15 +7,14 @@
     width: 100%;
     height: 100%;
     align-items: center;
-
-
   }
   
   .headerText {
     flex: 5;
     /* border: 2px solid red; */
     padding-left: 7%;
-    font-size: 1.25rem;
+    font-size: 1rem;
+    
   }
   
   .headerNav {
@@ -24,7 +23,7 @@
     display: flex;
     justify-content: flex-end;
     padding-right: 7%;
-    font-size: 1rem;
+    font-size: 0.75rem;
 
   }
 
@@ -32,11 +31,12 @@
     text-decoration: none;
     color: black;
     margin: 0 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+
   }
   
   .navLink:hover {
-    color: #fdaa8f;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    color: #FD7C65;
 
 }
 

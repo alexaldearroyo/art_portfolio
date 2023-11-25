@@ -10,10 +10,9 @@
 
 .githubIcon {
     font-size: 1rem;
-    color: red;
 }
 
 .footer a:hover {
-    color: #fdaa8f;
+    color: #FD7C65;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
