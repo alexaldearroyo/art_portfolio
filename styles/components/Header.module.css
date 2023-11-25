@@ -3,24 +3,29 @@
     display: flex;
     width: 15em; 
     flex-direction: row;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     width: 100%;
     height: 100%;
     align-items: center;
+
+
   }
   
   .headerText {
     flex: 5;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     padding-left: 7%;
+    font-size: 1.25rem;
   }
   
   .headerNav {
     flex: 10; 
-    border: 2px solid red;
+    /* border: 2px solid red; */
     display: flex;
     justify-content: flex-end;
     padding-right: 7%;
+    font-size: 1rem;
+
   }
 
   .navLink {
@@ -28,4 +33,11 @@
     color: black;
     margin: 0 10px;
   }
+  
+  .navLink:hover {
+    color: #fdaa8f;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
   

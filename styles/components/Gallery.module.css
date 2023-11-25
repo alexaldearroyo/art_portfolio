@@ -5,6 +5,6 @@
   align-items: center;
   flex-direction: row;
   gap: 3rem;
-  border: 2px inset red;
+  /* border: 2px inset red; */
 }
 

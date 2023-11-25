@@ -1,19 +1,17 @@
-import { Inter } from 'next/font/google'
-import Main from '../components/Main'
-import Gallery from '../components/Gallery'
-import TextSpace from '../components/TextSpace';
+import { Inter } from "next/font/google";
+import Main from "../components/Main";
+import TextSpace from "../components/TextSpace";
+import ImageComponent from "../components/Canvas";
 
-const inter = Inter({ subsets: ['latin'] })
-
-
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
     <>
-      <Main>
-        <Gallery />
-        <TextSpace />
-      </Main>
+        <Main>
+          <ImageComponent />
+          <TextSpace />
+        </Main>
     </>
-  )
+  );
 }

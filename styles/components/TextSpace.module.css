@@ -1,8 +1,25 @@
 .textSpace {
     display: flex;
-    justify-content: center;
-    align-items: center;
     padding: 2rem;
-    border: 2px inset red;
+    position:absolute;
+    top: 50%;
+    right: 10%;
+    /* border: 2px inset red; */
+    text-align: right;
+    font-family: monospace;
+    color: #223a6f;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    line-height: 1.5;
+    font-size: 1.25rem;
+  }
+  
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+  
+  .blink {
+    animation: blink 1.25s step-start infinite;
   }
   
