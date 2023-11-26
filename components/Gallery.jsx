@@ -36,7 +36,7 @@ function Gallery() {
 
   return (
     <div className={styles.gallerySpace}>
-      {shuffledImages.slice(0, 3).map((image, index) => (
+      {shuffledImages.slice(0, 12).map((image, index) => (
         <ArtworkCard key={index} image={image} />
       ))}
     </div>

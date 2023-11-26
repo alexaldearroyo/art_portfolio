@@ -18,7 +18,9 @@ function Header() {
             <span className={styles.navLink}>Home</span>
           </Link>
         ) : (
-          <span className={styles.navLink}>Home</span>
+          <span className={`${styles.navLink} ${styles.navLinkInactive}`}>
+            Home
+          </span>
         )}
 
         {router.pathname !== "/artworks" ? (
@@ -26,12 +28,21 @@ function Header() {
             <span className={styles.navLink}>Artworks</span>
           </Link>
         ) : (
-          <span className={styles.navLink}>Artworks</span>
+          <span className={`${styles.navLink} ${styles.navLinkInactive}`}>
+            Artworks
+          </span>
         )}
 
-        <a href="#" className={styles.navLink}>
-          More
-        </a>
+        {router.pathname !== "/more" ? (
+          <Link href="/more" passHref>
+            <span className={styles.navLink}>More</span>
+          </Link>
+        ) : (
+          <span className={`${styles.navLink} ${styles.navLinkInactive}`}>
+            More
+          </span>
+        )}
+
       </div>
     </div>
   );
