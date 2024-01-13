@@ -4,8 +4,9 @@
 ![React](https://img.shields.io/badge/React-17.0.2-blue)
 ![Next.js](https://img.shields.io/badge/Next.js-12.0.2-green)
 
-
 This is a digital art portfolio website created by Alex Arroyo. It showcases a collection of digital artworks in a visually appealing manner.
+
+![Screenshot](./resources/screenshot.png)
 
 ## Tools used
 
