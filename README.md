@@ -14,7 +14,7 @@ This portfolio website is built using Next.js, a popular React framework for bui
 
 ## Live preview
 
-Check the web site here: https://github.com/alexaldearroyo/art_portfolio
+Check the web site here: https://alexarroyo-art.vercel.app/
 
 
 ---
